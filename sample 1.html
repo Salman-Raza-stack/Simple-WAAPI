@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WEB ANIMATION API</title>
+<style>
+#box{
+    height : 100px;
+    width : 100px;
+    background-color : darkcyan;
+}
+</style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        var element = document.querySelector("#box");
+        element.animate([
+            
+            {transform : "translate(0,0)"},
+            {transform : "translate(600px,0)"},
+            {transform : "translate(0,0)"},
+            {transform : "translate(600px,0)"}
+        ],{
+            duration: 15000,
+            iterations: Infinity
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WEB ANIMATION API</title>
+<style>
+body{
+    background-image:url ('./images/img2.gif');
+    background-repeat: no-repeat;
+    background-size : cover;
+    display : flex;
+    justify-content : center;
+}
+#box{
+    height :295px;
+    width : 700px;
+    background-color : green;
+    color : white;
+    display : flex;
+    justify-content : center;
+    align-items:center;
+    text-transform: uppercase;
+    margin-top : 200px;
+}
+
+#hack{
+    background-color : green;
+    color : white;
+    display : flex;
+    justify-content : center;
+    align-items:center;
+    text-transform: uppercase;
+    margin-top : 200px;
+}
+</style>
+</head>
+<body>
+    <div id="box">
+    <h1>Stay Away From Me !!!!!</h1>
+    </div>
+    
+    <img src="./images/img.gif" id="hack"/>
+    <script>
+        var elem = document.querySelector("#hack");
+        var animatedElem = elem.animate([
+            {transform:"translate(0px,0px)"},
+            {transform:"translate(0,200px)"},
+            {transform:"translate(200px,200px)"},
+            {transform:"translate(200px,0px)"},
+            {transform:"translate(0px,0px)"},
+            
+            
+            ],{
+            duration: 10000,
+            iterations: Infinity
+        })
+        document.addEventListener("mousedown", ()=>{
+            animatedElem.pause();
+        })
+
+        document.addEventListener("mouseup", ()=>{
+            animatedElem.play();
+        })
+    </script>
+</body>
+</html>

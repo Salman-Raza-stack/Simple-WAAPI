@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WEB ANIMATION API</title>
+<style>
+body{
+    display : flex;
+    justify-content : center;
+}
+#box{
+    height :200px;
+    width : 300px;
+    background-color : darkcyan;
+    display : flex;
+    justify-content : center;
+    align-items:center;
+    text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+    <div id="box">
+    <h2>Warning stay home!!</h2>
+    </div>
+    <script>
+        var element = document.querySelector("#box");
+        element.animate([
+            
+            {transform : "scale(0.5)", background:"white",color: "white"},
+            {transform : "scale(1)",background:"darkcyan",color: "white"},
+            {transform : "scale(0.5)",background:"white",color: "white"},
+
+            {transform : "translate(0,0)", background : 'darkcyan',color: "white"},
+            
+            {transform : "scale(0.5)", background:"white",color: "white"},
+            {transform : "scale(1)",background:"darkcyan",color: "white"},
+            {transform : "scale(0.5)",background:"white",color: "white"},
+
+            {transform : "translate(400px,0)", background:'red',color: "white"},
+            
+            {transform : "scale(0.5)", background:"white",color: "white"},
+            {transform : "scale(1)",background:"darkcyan",color: "white"},
+            {transform : "scale(0.5)",background:"white",color: "white"},
+
+            {transform : "translate(400px ,400px)", background:'blue',color: "white"},
+            
+            {transform : "scale(0.5)", background:"white",color: "white"},
+            {transform : "scale(1)",background:"darkcyan",color: "white"},
+            {transform : "scale(0.5)",background:"white",color: "white"},
+
+            {transform : "translate(0,400px)", background:'yellow',color: "white"},
+            
+            {transform : "scale(0.5)", background:"white",color: "white"},
+            {transform : "scale(1)",background:"darkcyan",color: "white"},
+            {transform : "scale(0.5)",background:"white",color: "white"},
+
+            {transform : "translate(0,0)" ,background:"black",color: "white"},
+            
+            ],{
+            duration: 10000,
+            iterations: Infinity
+        })
+    </script>
+</body>
+</html>
